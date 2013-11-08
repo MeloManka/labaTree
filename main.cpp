@@ -1,17 +1,17 @@
 #include <iostream>
 #include <fstream>
-#include <stdlib.h>
+#include <cstdlib>
 
-#include "tree.h"
+#include "RBTree.h"
 
 using namespace std;
 
 int main()
 {
-    MainTree intTree1,intTree2,intTree3;
+    MainRBTree intTree1,intTree2,intTree3;
     int intValue;
 
-////чтение элементов первого дерева/////
+////С‡С‚РµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РїРµСЂРІРѕРіРѕ РґРµСЂРµРІР°/////
 
     fstream fileTree1;
     fileTree1.open("intTree1.txt");
@@ -30,11 +30,12 @@ int main()
     }
     cout<<endl;
     fileTree1.close();
+
     cout<<"First tree:"<<endl<<endl;
     intTree1.out(k1);
     cout<<endl<<endl;
 
-////чтение элементов второго дерева/////
+////С‡С‚РµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РІС‚РѕСЂРѕРіРѕ РґРµСЂРµРІР°/////
 
     fstream fileTree2;
     fileTree2.open("intTree2.txt");
@@ -56,16 +57,17 @@ int main()
     intTree2.out(k2);
     cout<<endl<<endl;
 
-////объединение/////
-    cout<<"Union:"<<endl<<endl;
+////РѕР±СЉРµРґРёРЅРµРЅРёРµ/////
+    /*cout<<"Union:"<<endl<<endl;
     intTree3.unite(intTree1,intTree2);
     intTree3.out(k1+k2);
 
-////пересечение/////
+////РїРµСЂРµСЃРµС‡РµРЅРёРµ/////
     cout<<endl<<endl;
     cout<<"Intersection:"<<endl<<endl;
     intTree3.intersection(intTree1,intTree2);
     intTree3.out(k1+k2);
-
+*/
     return 0;
 }
+
